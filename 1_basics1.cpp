@@ -59,6 +59,35 @@ int main(){
 	cout<< fixed << setprecision(0) <<cc<<endl;    // fixed- remove scientific notation
 
 	
+	// string and getline
+	string str1;
+	cin >> x;
+	cin.ignore();     // getline reads from current posn of cursor. Use this to ignore curr line and get from next line.
+	getline(cin, str1);
+	cout<<str1<<endl;
 
 
-}
+	// Arrays
+	int arr[10];
+	arr[11] = 10;          // Undefined behaviour. Might not work in other systems or online platform. Avoid using it.
+	cout<<arr[11]<<endl;
+
+	char sarr[10];
+
+	// Locally you can create an arr of max size around 1e5. Any bigger array will give segmentation fault.
+	// You can create higher size (around 1e7) arr Globally with const arr size.
+
+
+	// Online Judges TC - 1e7-1e8 iters in 1 sec
+
+	// Avg time :
+	// 1e7- 1sec
+	// 1e8- 10sec
+	// 1e9- 100sec
+	// 1e10- 1000sec
+	// 1e11- 10000sec
+
+
+	
+		
+}	
