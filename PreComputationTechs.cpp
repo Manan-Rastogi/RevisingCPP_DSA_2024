@@ -2,6 +2,22 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+
+/*
+    1. Prefix Sum(Just Precalculate what's required)
+    2. F/W and B/W Sum
+    3. Hashing Technique
+
+    4. Use Prefix Sum to store count/sum(l to r). 
+        Eg: count of a from index l to r
+        Soln: Presum -> in an array add 1 to index of a.
+                     -> prefixsum = pf[i] <- pf[1] + .. + pf[i].
+                     -> count/sum from l to r -> pf[r] - pf[l]
+
+    5. Trick of adding k from a to b -> Check PreComputationGoodConceptQuestion.cpp
+*/
+
+
 int main(){
     // Input the size of the array
     int n;
