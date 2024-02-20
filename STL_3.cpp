@@ -2,6 +2,8 @@
 
 using namespace std;
 
+// COMPLEX STL CONTAINERS CAN BE COMPARED TO EACH OTHER(same containers obviously).
+
 // Maps
 int main(){
 
@@ -63,5 +65,5 @@ int main(){
 	//////////////////////////////////  MULTIMAPS /////////////////////////////
 	//        Red Black Tree
 	//        multiple same keys
-	// multimap
+	//  	  multimap
 }
