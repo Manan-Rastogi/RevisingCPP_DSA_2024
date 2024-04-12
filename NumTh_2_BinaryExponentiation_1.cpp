@@ -17,10 +17,10 @@ int binaryExponentiationRecur(int a, int b){
 }
 
 /*
-Convert Power into Binary then break a^b1 * a^b2 * .... like converting b back to decimal.
+Convert Power into Binary then break a^b1 + a^b2 + .... like converting b back to decimal.
 2^13 -> 2^(1101)bin -> 2^(8 + 4 + 0 + 1)
 */
-int binaryExponentiationIter(int a, int b){
+int binaryExponentiationIter(int a, int b){  // TC= log(N)
 	int ans = 1;
 	while(b){
 		if(b&1){
