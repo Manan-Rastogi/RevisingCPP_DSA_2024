@@ -61,7 +61,7 @@ For 36, (1 + 2 + 4)*(1 + 3 + 9)  [Expand it to see all divisors]
 	= 7 * 13 = 91
 
 
-So To optimize this soln we need to optimizee the method to find Prime Factors.
+So To optimize this soln we need to optimize the method to find Prime Factors.
 */
 
 
@@ -136,7 +136,7 @@ int main(){
 	// cout<<isPrimeRoot(121)<<endl;
 
 	vector<int> pf;
-	pf = PrimeFactorsBrute(121*7);
+	pf = PrimeFactorsRoot(5);
 
 	for(int i:pf){
 		cout<<i<<endl;

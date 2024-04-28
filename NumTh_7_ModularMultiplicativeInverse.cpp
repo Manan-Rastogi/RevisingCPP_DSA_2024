@@ -29,7 +29,7 @@ using namespace std;
 
 
 	   => If M is not prime but A and M are Coprimes we need to use EEA(Extended Euclidean Algorithm)
-	   // Veru Difficult Question. Generally Not Asked. Revisit once you are expert in Normal Questions.
+	   // Very Difficult Question. Generally Not Asked. Revisit once you are expert in Normal Questions.
 */
 
 const int M = 1e9+7;
@@ -44,7 +44,7 @@ int binaryExponentiation(int A, int B){
 		B >>= 1;
 	}
 	return ans;
-}
+}	
 
 int main(){	
 	int a = 2;
@@ -55,4 +55,6 @@ int main(){
 	cout<<(a * b) % M<<endl;
 
 	return -1;
-}
+} 
+ 
+

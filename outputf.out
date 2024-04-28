@@ -1,2 +1,18 @@
-500000004
-1
+Par= 1 | Child= 3
+Par= 3 | Child= 1
+Par= 3 | Child= 2
+Par= 2 | Child= 3
+Par= 2 | Child= 6
+Par= 6 | Child= 4
+Par= 4 | Child= 3
+Par= 4 | Child= 6
+Par= 6 | Child= 3
+Par= 6 | Child= 2
+Par= 6 | Child= 5
+Par= 5 | Child= 1
+Par= 5 | Child= 3
+Par= 5 | Child= 6
+Par= 3 | Child= 4
+Par= 3 | Child= 6
+Par= 3 | Child= 5
+Par= 1 | Child= 5
