@@ -22,6 +22,7 @@ bool visited[N];
 */
 
 // we need to apply dfs for every child of current node that has not been visited.
+// TC - O(N+E)   Recursion called E Times.
 void dfs(int start_vertex){
 	// 1. take action on vertex after entering the vertex.
 	visited[start_vertex] = true;
@@ -57,7 +58,7 @@ int main(){
 		graph[v1].push_back(v2);
 		graph[v2].push_back(v1);
 
-
+		
 	}
 
 	dfs(1);
