@@ -1,7 +1,7 @@
 #include<bits/stdc++.h> 
 using namespace std;
 
-
+int sum(int arr[], int n);
 
 /*
 #################################### 1. Pointers with Array
@@ -48,7 +48,48 @@ using namespace std;
 *	char *pc = &carr[0];
 	cout<<pc;  // pc should be address of carr[0] but it will give the char at carr[0].
 	cout<<*pc;  // again entire string.  
+	*pc starts printing characters from starting till it encounters /0 in array.
+		WHAT IF /0 IS NOT PRESENT?? 
+		- char z= 'z'; char *pz=&z;
+		- it will keep iterating till /0 is encountered. so a lot of garbage characters might be printed.
 
+
+
+------------------------ 2b. Difference between char and char*
+->	char ch[5] = "abcd";
+	-> First a temp mem is created to store the RHS string. temp memory <-- "abcd\0"
+	-> Then this temp Mem is copied to ch array.
+
+->	char *c = "abcd";
+	-> temp memory is allocated to "abcd/0"
+	-> temp memory's first char's address is referenced by *c.
+	-> THIS IS VERY RISKY SO NEVER DO THIS.
+
+
+
+################################# 3. Pointers and Function
+**
+void update(int *p){
+	p = p + 1;			 // pointer won't be updated as its a pointer, not a pointer to a pointer.
+	*p++;                // will update value as a pointer is passed
+}
+
+=> A pointer passed to a function can change the value of the var it referenced. But the actual pointer can not be changed as in function there is a copy of pointer.
+
+
+**
+int sum(int arr[], int n){         // arr is pointer not the array. WOW!!!
+	// PROOF
+	cout<<sizeof(arr)<<endl;       // It will give 8.... WOW!!!
+}
+
+=> arr[]  == *arr  --  use *arr to avoid warning
+=> A pointer to array is passed in this way.
+=> Any updation done to arr element in this func wil stay when returned.
+
+=> Benefit >> Instead of passing whole arr only a pointer to base element is passed.
+	-> We can send a part of array. Eg: Sum of last 3 elements - sum(arr+2, 3) // Sending from 3rd element. 
+	-> No copy of array is created, but of pointer. Faster than vectors.
 */
 
 
@@ -100,13 +141,44 @@ int main(){
 	cout<<"\n**********************\n";
 
 	char *pc = &carr[0];
-	cout<<*pc<<endl;         
-	cout<<pc<<endl;
+	cout<<*pc<<endl;         // it will print 1st char
+	cout<<pc<<endl;			 // it will print entire string
+
+
+	char z='Z';
+	char* pz=&z; 
+	cout<<pz<<endl;
 
 
 
 
+// ################################# 3. Pointers and Function
 
+	cout<<"\n**********************\n";
+
+	int arrr[5] = {1, 3, 5 ,7, 8};
+	cout<<"Sum arrr = "<<sum(arrr, 5)<<endl;
+	cout<<arrr[1];         // Its Updated :)
 	return 0;
 
+}
+
+
+int sum(int* arr, int n){  // arr[]  == *arr  
+
+	cout<<sizeof(arr)<<endl;
+	 // warning: 'sizeof' on array function parameter 'arr' will return size of 'int*' [-Wsizeof-array-argument]
+	cout<<arr<<endl;
+	cout<<*arr<<endl;
+
+
+	int s = 0;
+	for(int i=0;i<n;i++){
+		s += arr[i];
+	}
+
+	arr[1] = 100;
+
+
+	return s;
 }
