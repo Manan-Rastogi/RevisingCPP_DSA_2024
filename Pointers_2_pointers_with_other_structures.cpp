@@ -14,7 +14,7 @@ int sum(int arr[], int n);
 				 => arr[i] = *(arr+i)
 				 => i[arr] = *(i+arr)                    // Confusing
  					Why this works? - arr[i] is calculated as *(arr+i) internally. By this logic i[arr] will be *(i+ arr)
-				 => &arr == arr == &arr[0]  in arrays
+				 => &arr == arr == &arr[0] in arrays
 				 	&arr and arr both represent the address of the first element of the array.
 				 	&arr[0] explicitly represents the address of the first element.
 
@@ -40,7 +40,7 @@ int sum(int arr[], int n);
 ------------------------- 2a. int vs char array and pointers
 *	int arr[2] = {1, 2};
 	char carr[3] = "12";  // carr[2] == '/0'  Last char is null character.
-	=> cout <<  is implemented differently for char and int
+	=> cout << carr -> 12  // cout is implemented differently for char and int
 	
 
 *	arr is address of 1st element. carr is the string(char array) formed by characters.

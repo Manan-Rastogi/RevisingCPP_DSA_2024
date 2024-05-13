@@ -1,5 +1,7 @@
 # Pointer Notes From ChatGPT. 
 
+### Practice- https://www.naukri.com/code360/guided-paths/pointers 
+
 ## Why Pointers are Essential?
 
 - When a variable like `int x = 5;` is declared, it occupies memory.

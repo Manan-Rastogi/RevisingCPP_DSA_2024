@@ -74,7 +74,7 @@ Now the value of a will be changed as a pointer to a is passed which works on ad
 
 ------------------ 4. Size of Pointer ------------------
 Size of int is 4 bytes [generally]
-Any type of Data, pointer will store the address only. so it's size is always 8 bytes.
+Any type of Data, pointer will store the address only. so it's size is always 8 bytes. [64-bit int]
 
 
 
